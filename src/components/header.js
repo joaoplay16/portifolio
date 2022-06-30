@@ -5,7 +5,7 @@ import styled from "styled-components"
 const Header = () => {
   return (
     <header>
-      <Heading className="container">
+      <Heading className="container cor-1">
       <a href="./">
         <h2 className="font-1-l">João Pedro</h2>
       </a>
