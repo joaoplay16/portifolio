@@ -22,8 +22,7 @@ const PortfolioItem = ({children, image, imageDescription, technologies, link}) 
 const ItemContainer = styled("div")`
   display: flex;
   flex-direction: column;
-  max-width: 320px;
-  height: 540px;
+  width: 320px;
   padding: 10px;
   border-radius: 25px;
   box-shadow: 0 0px 4px 0.5px rgb(10, 39, 55, 0.5);
