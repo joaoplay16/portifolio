@@ -1,13 +1,17 @@
 import React from "react"
-import { Header } from "components"
+import { Header, Subtitle } from "components"
 import Sobre from "./sobre"
+import Portfolio from "./portifolio"
 
 const Home = () => {
-
   return (
     <>
-      <Header/>
-      <Sobre/>
+      <Header />
+      <Sobre />
+      <div className="container">
+        <Subtitle>Portfólio</Subtitle>
+      </div>
+      <Portfolio />
     </>
   )
 }
