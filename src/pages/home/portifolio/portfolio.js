@@ -22,8 +22,7 @@ const Portfolio = () => {
           "Datastore",
           "MVVM",
         ]}
-        link="/"
-      >
+        link="/">
         Comics Info, é um cliente App para a Marvel API, que obtém informações
         sobre as HQ's Marvel. Desenvolvido em Kotlin, utilizando o UI kit
         Jetpack Compose.
@@ -39,8 +38,7 @@ const Portfolio = () => {
           "Firestore",
           "Analytics",
         ]}
-        link="/"
-      >
+        link="/">
         Setime é um aplicativo de agendamento com armazenamento de dados em
         nuvem desenvolvido para um salão de beleza, para que os esteticistas
         pudessem organizar seus horários de atendim...
@@ -55,12 +53,10 @@ const Portfolio = () => {
           "Recycleview",
           "Swipe To Delete",
         ]}
-        link="/"
-      >
-         Anime View é um criador de lembretes dos últimos episódios de séries de
+        link="/">
+        Anime View é um criador de lembretes dos últimos episódios de séries de
         animes assistidos, chegou a +400 downloads no Google Play, suportando
         177 países em 4 idiomas.
-       
       </PortfolioItem>
       <PortfolioItem
         image={AgendamentoWebCover}
@@ -72,8 +68,7 @@ const Portfolio = () => {
           "Mercado Pago",
           "Authentication",
         ]}
-        link="/"
-      >
+        link="/">
         Agendamento Web é um sistema web de auto-agendamento para serviços de
         estética. Permite que o cliente escolha a procedimento, profissional,
         data e método de pagamento do aten...
@@ -90,8 +85,7 @@ const Portfolio = () => {
           "MVC",
           "REST",
         ]}
-        link="/"
-      >
+        link="/">
         Projeto Vamos. Desenvolvido para automacão dos processos e gerenciamento
         dados da ONG para permitir uma maior praticidade na gestão da informação
         e controle de...
@@ -102,9 +96,19 @@ const Portfolio = () => {
 
 const PortfolioArticle = styled("article")`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px 60px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: start;
+  justify-items: center;
+  gap: 40px;
   padding: 30px 60px;
+
+  @media (max-width: 1200px) {
+    gap: 40 0px;
+    padding: 30px;
+  }
+  @media (max-width: 800px) {
+    gap: 40px;
+  }
 `
 
 export default Portfolio
