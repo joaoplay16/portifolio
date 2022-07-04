@@ -1,9 +1,10 @@
 import React from "react"
-import { Header, Subtitle } from "components"
+import { Header, Footer,Subtitle } from "components"
 import Sobre from "./sobre"
 import Portfolio from "./portifolio"
 import Formacao from "./formacao"
 import Skills from "./skills"
+
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
           'NodeJS','REST', 'SQLite','MySQL','MongoDB']
         }
       />
+      <Footer/>
     </>
   )
 }
