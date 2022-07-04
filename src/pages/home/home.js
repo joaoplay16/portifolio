@@ -3,6 +3,7 @@ import { Header, Subtitle } from "components"
 import Sobre from "./sobre"
 import Portfolio from "./portifolio"
 import Formacao from "./formacao"
+import Skills from "./skills"
 
 const Home = () => {
   return (
@@ -14,6 +15,13 @@ const Home = () => {
       </div>
       <Portfolio />
       <Formacao/>
+      <Skills 
+        title={<Subtitle>Skills</Subtitle>}
+        skillList={
+          ['Android', 'Kotlin', 'Java','javascript','ReactJS',
+          'NodeJS','REST', 'SQLite','MySQL','MongoDB']
+        }
+      />
     </>
   )
 }
