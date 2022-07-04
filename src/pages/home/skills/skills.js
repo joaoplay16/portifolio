@@ -46,39 +46,41 @@ const Skills = ({ title, skillList }) => (
 const SkillsSection = styled("section")`
   --padding-x: 40px;
   padding-top: 60px;
-  padding-bottom: 20px;
+  padding-bottom: 60px;
   position: relative;
 
   p {
     padding: 0px var(--padding-x);
   }
 
-  ::after{
+  ::after {
     content: "";
     display: block;
     position: absolute;
     background: url(${Decorator});
     width: 64px;
     height: 82px;
-    top: calc( 100% + 30px);
+    bottom: -12%;
     left: 0px;
   }
 
   @media (max-width: 1200px) {
-    ::after{
+    ::after {
       transform: scale(0.6);
+      bottom: -11%;
     }
   }
 
   @media (max-width: 800px) {
-    padding-bottom: 0px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 
     p {
       padding: 0px;
       font: 400 1.125rem/1.33 "Roboto Mono", sans-serif;
     }
 
-    ::after{
+    ::after {
       display: none;
     }
   }
