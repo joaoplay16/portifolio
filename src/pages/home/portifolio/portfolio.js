@@ -6,8 +6,13 @@ import AnimeViewCover from "img/animeview.webp"
 import SetimeCover from "img/setme.png"
 import AgendamentoWebCover from "img/agendamento-web.jpg"
 import ProjetoVamosCover from "img/projeto-vamos.jpg"
-const Portfolio = () => {
+
+const Portfolio = ({title}) => {
   return (
+    <>
+      <div className="container">
+        {title}
+      </div>  
     <PortfolioArticle className="container">
       <PortfolioItem
         image={ComicsInfoCover}
@@ -91,6 +96,7 @@ const Portfolio = () => {
         e controle de...
       </PortfolioItem>
     </PortfolioArticle>
+    </>
   )
 }
 

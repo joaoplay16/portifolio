@@ -1,5 +1,5 @@
 import React from "react"
-import { Header, Footer,Subtitle } from "components"
+import { Header, Footer, Subtitle } from "components"
 import Sobre from "./sobre"
 import Portfolio from "./portifolio"
 import Formacao from "./formacao"
@@ -11,10 +11,7 @@ const Home = () => {
     <>
       <Header />
       <Sobre />
-      <div className="container">
-        <Subtitle>Portfólio</Subtitle>
-      </div>
-      <Portfolio />
+      <Portfolio title={<Subtitle>Portfólio</Subtitle>}/>
       <Formacao/>
       <Skills 
         title={<Subtitle>Skills</Subtitle>}
