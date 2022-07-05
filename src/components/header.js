@@ -12,7 +12,7 @@ const Header = () => {
         <nav aria-label="Navegação">
           <HeaderMenu className="header-menu font-1-m-b">
             <li><NavLink href="">Sobre</NavLink></li>
-            <li><NavLink href="">Portfolio</NavLink></li>
+            <li><NavLink href="">Portfólio</NavLink></li>
             <li><NavLink href="">Formação</NavLink></li>
             <li><NavLink href="">Skills</NavLink></li>
             <li><NavLink href="">Contato</NavLink></li>
@@ -32,12 +32,24 @@ const Heading = styled('div')`
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
+
+
+  @media (max-width: 800px) {
+    padding-top: 20px;
+  }
+ 
 `
 
 const HeaderMenu = styled('ul')`
   display: flex;
   flex-wrap: wrap;
   gap: 40px 32px;
+
+  @media (max-width: 800px) {
+    gap: 15px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 `
 
 const NavLink = styled('a')`
@@ -59,6 +71,23 @@ const NavLink = styled('a')`
 
   :hover:after{
     width: 50%;
+  }
+
+  @media (max-width: 800px) {
+    font: 400 1.125rem/1.33 "Archivo", sans-serif;
+    color: var(--cor-1);
+
+    padding: 5px;
+    ::after{
+      display: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    background-color: var(--cor-s1);
+    border-radius: 25px;
+    padding: 8px 20px;
+
   }
 `
 
