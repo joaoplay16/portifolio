@@ -62,6 +62,7 @@ const Introducao = styled("main")`
 
   @media (max-width: 800px) {
     gap: 0 40px;
+    margin-bottom: 20px;
 
     h1 {
       font-size: 3rem;
