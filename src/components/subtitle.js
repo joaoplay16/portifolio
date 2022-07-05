@@ -5,9 +5,7 @@ const Subtitle = ({ children }) => (
 )
 
 const Text = styled("h2")`
-  @media (max-width: 1200px) {
-    font-size: 1.9rem;
-  }
+  font-size: 1.9rem;
 `
 
 export default Subtitle
