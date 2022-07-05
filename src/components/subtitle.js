@@ -1,6 +1,13 @@
 import React from "react"
-const Subtitle = ({children}) => (
-  <h2 className="font-1-l cor-1">{children}</h2>
+import styled from "styled-components"
+const Subtitle = ({ children }) => (
+  <Text className="font-1-l cor-1">{children}</Text>
 )
+
+const Text = styled("h2")`
+  @media (max-width: 1200px) {
+    font-size: 1.9rem;
+  }
+`
 
 export default Subtitle
