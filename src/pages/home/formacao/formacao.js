@@ -46,7 +46,8 @@ const Formacao = () => (
 const EducationSection = styled("section")`
   background-color: var(--cor-s4);
   margin-top: 72px;
-  padding: 60px 0px;
+  padding-top: 60px;
+  padding-bottom: 20px;
 `
 
 const EducationContainer = styled("div")`
@@ -55,7 +56,7 @@ const EducationContainer = styled("div")`
   justify-items: center;
   align-items: start;
   gap: 20px;
-  padding: 20px 60px;
+  padding: 30px 60px;
 
   img {
     max-width: 100%;
