@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import Chip from "./chip"
 
 const PortfolioItem = ({children, image, imageDescription, technologies, link}) => (
   <ItemContainer>
@@ -9,7 +10,16 @@ const PortfolioItem = ({children, image, imageDescription, technologies, link}) 
     </p>
     <ul>
       {technologies?.map(tech => (
-         <Chip className="font-1-xs cor-p2">{tech}</Chip>
+         <Chip
+         key={tech}
+         className="font-1-xs cor-p2"
+         color="--cor-p2"
+         paddingY={2}
+         paddingX={10}
+         lineWidth={2}
+         borderRadius={15}>
+         {tech}
+       </Chip>
       ))}
     </ul>
 
@@ -60,13 +70,6 @@ const ItemContainer = styled("div")`
     height: 2px;
     top: 25px;
   }
-`
-
-const Chip = styled("li")`
-  padding: 2px 10px;
-  border-radius: 10px;
-  border: 2px solid var(--cor-p2);
-  max-width: 16ch;
 `
 
 export default PortfolioItem
