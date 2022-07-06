@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Decorator from "icons/decorator2.svg"
 
 const Skills = ({ title, skillList }) => (
-  <SkillsSection className="container">
+  <SkillsSection id="skills" className="container">
     {title}
     <p className="font-2-m cor-1">
       Estas são as principais linguagens e tecnologias que utilizo.

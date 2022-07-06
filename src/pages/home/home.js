@@ -9,8 +9,8 @@ import Skills from "./skills"
 const Home = () => {
   return (
     <>
-      <Header />
-      <Sobre />
+      <Header/>
+      <Sobre/>
       <Portfolio title={<Subtitle>Portfólio</Subtitle>}/>
       <Formacao/>
       <Skills 
@@ -20,7 +20,7 @@ const Home = () => {
           'NodeJS','REST', 'SQLite','MySQL','MongoDB']
         }
       />
-      <Footer/>
+      <Footer id="contact"/>
     </>
   )
 }

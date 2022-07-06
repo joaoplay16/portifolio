@@ -5,7 +5,7 @@ import styled from "styled-components"
 
 const Sobre = () => {
   return (
-    <Introducao className="container">
+    <Introducao id="about" className="container">
       <img src={ProfileImg} alt="Foto do perfil" width={290} height={400} />
       <div>
         <h1 className="font-1-xxl cor-1">

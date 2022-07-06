@@ -5,8 +5,8 @@ import WhatsappIcon from "icons/whatsapp.svg"
 import GithubIcon from "icons/github.svg"
 import PlasystoreIcon from "icons/playstore.svg"
 
-const Footer = () => (
-  <FooterStyled>
+const Footer = ({id}) => (
+  <FooterStyled id={id}>
     <FooterContainer className="container">
       <p className="message font-2-m cor-4">
         Estou disponível para novos projetos no momento. Entre em contato comigo

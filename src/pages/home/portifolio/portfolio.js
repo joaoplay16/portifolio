@@ -10,10 +10,10 @@ import ProjetoVamosCover from "img/projeto-vamos.jpg"
 const Portfolio = ({title}) => {
   return (
     <>
-      <div className="container">
+      <div className="container" id="portfolio">
         {title}
       </div>  
-    <PortfolioArticle className="container">
+    <PortfolioArticle  className="container">
       <PortfolioItem
         image={ComicsInfoCover}
         imageDescription="Aplicativo Comics Info"

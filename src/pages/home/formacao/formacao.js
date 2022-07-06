@@ -4,7 +4,7 @@ import styled from "styled-components"
 import MeritAwardImage from "img/merit-award.webp"
 import TranslateIcon from "icons/translate.svg"
 const Formacao = () => (
-  <EducationSection>
+  <EducationSection id="education">
     <div className="container">
       <Subtitle>Formação</Subtitle>
     </div>
