@@ -6,6 +6,12 @@ body {
   font-family: 'Archivo', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+}
+
+html,
+body{
+  scroll-behavior: smooth;
 }
 
 h1,
