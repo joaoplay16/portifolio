@@ -1,1 +1,6 @@
 export const HOME = '/'
+export const ANIME_VIEW = '/anime-view'
+export const COMICS_INFO = '/comics-info'
+export const SETIME = '/setime'
+export const AGENDAMENTO_WEB = '/agendamento-web'
+export const PROJETO_VAMOS = '/projeto-vamos'
