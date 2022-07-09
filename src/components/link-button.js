@@ -21,6 +21,18 @@ const StyledLink = styled("a")`
     height: 2px;
     top: 25px;
   }
+
+  --hover-color: #8effe4;
+  
+  :hover{
+    
+    color: var(--hover-color);
+
+    ::after{
+    background-color: var(--hover-color);
+
+    }
+  }
 `
 
 export default LinkButton

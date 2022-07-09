@@ -1,8 +1,8 @@
-import { Chip, Footer, Header, Subtitle } from "components"
+import { Chip, Footer, Header, LinkButton } from "components"
 import React, { useState } from "react"
 import styled from "styled-components"
 import ComicsInfoImg from "img/comics-info.png"
-import ComicsInfoImg2 from "img/comics-info.png"
+import ComicsInfoImg2 from "img/comics-info-2.png"
 import ArrowRight from "icons/slide-arrow-right.svg"
 import ArrowLeft from "icons/slide-arrow-left.svg"
 import PlaystoreIcon from "icons/playstore.svg"
@@ -108,19 +108,19 @@ const ComicsInfo = () => {
           <LinksContainer>
             <LinkButtonWithIcon className="link-button">
               <img src={PlaystoreIcon} alt="Ícone Google Play" />
-              <a
+              <LinkButton
                 className="font-2-xs cor-0 googleplay"
                 href="https://play.google.com/store/apps/details?id=com.playlab.marvelcomicsinfo">
                 ver no google play
-              </a>
+              </LinkButton>
             </LinkButtonWithIcon>
             <LinkButtonWithIcon className="link-button">
               <img src={GithubIcon} alt="Ícone Github" />
-              <a
+              <LinkButton
                 className="font-2-xs cor-0 googleplay"
                 href="https://github.com/joaoplay16/marvel-comics-info">
                 github do projeto
-              </a>
+              </LinkButton>
             </LinkButtonWithIcon>
           </LinksContainer>
         </InfoContainer>
