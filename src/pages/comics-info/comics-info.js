@@ -1,4 +1,4 @@
-import { Chip, Footer, Header, LinkButton } from "components"
+import { Chip, Footer, Header, Subtitle } from "components"
 import React, { useState } from "react"
 import styled from "styled-components"
 import ComicsInfoImg from "img/comics-info.png"
@@ -106,22 +106,22 @@ const ComicsInfo = () => {
             ))}
           </TechnologiesContainer>
           <LinksContainer>
-            <LinkButton className="link-button">
+            <LinkButtonWithIcon className="link-button">
               <img src={PlaystoreIcon} alt="Ícone Google Play" />
               <a
                 className="font-2-xs cor-0 googleplay"
                 href="https://play.google.com/store/apps/details?id=com.playlab.marvelcomicsinfo">
                 ver no google play
               </a>
-            </LinkButton>
-            <LinkButton className="link-button">
+            </LinkButtonWithIcon>
+            <LinkButtonWithIcon className="link-button">
               <img src={GithubIcon} alt="Ícone Github" />
               <a
                 className="font-2-xs cor-0 googleplay"
                 href="https://github.com/joaoplay16/marvel-comics-info">
                 github do projeto
               </a>
-            </LinkButton>
+            </LinkButtonWithIcon>
           </LinksContainer>
         </InfoContainer>
       </Container>
@@ -206,6 +206,39 @@ const LinksContainer = styled("div")`
 
   @media (max-width: 480px) {
     justify-content: center;
+  }
+`
+
+const LinkButtonWithIcon = styled("div")`
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+
+  a {
+    align-self: center;
+    margin-top: 8px;
+    padding: 8px 0px;
+    position: relative;
+  }
+
+  a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: var(--cor-0);
+    width: 100%;
+    height: 2px;
+    top: 25px;
+  }
+
+  a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    bottom: 0px;
+    left: -40px;
   }
 `
 

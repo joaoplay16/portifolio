@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Chip from "./chip"
+import {Chip, LinkButton} from "components"
 
 const PortfolioItem = ({children, image, imageDescription, technologies, link}) => (
   <ItemContainer>
@@ -23,9 +23,9 @@ const PortfolioItem = ({children, image, imageDescription, technologies, link}) 
       ))}
     </ul>
 
-    <a className="font-2-xs cor-0" href={link}>
+    <LinkButton className="font-2-xs cor-0" href={link}>
       Mostre-me mais
-    </a>
+    </LinkButton>
   </ItemContainer>
 )
 
@@ -52,23 +52,6 @@ const ItemContainer = styled("div")`
     gap: 8px;
     justify-content: center;
     align-items: center;
-  }
-
-  a {
-    align-self:center ;
-    margin-top: 8px;
-    padding: 8px 0px;
-    position: relative;
-  }
-
-  a::after {
-    content: "";
-    display: block;
-    position: absolute;
-    background-color: var(--cor-0);
-    width: 100%;
-    height: 2px;
-    top: 25px;
   }
 `
 
