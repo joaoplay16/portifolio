@@ -1,7 +1,8 @@
-import { Chip, Footer, Header } from "components"
-import React from "react"
+import { Chip, Footer, Header, Subtitle } from "components"
+import React, { useState } from "react"
 import styled from "styled-components"
 import ComicsInfoImg from "img/comics-info.png"
+import ComicsInfoImg2 from "img/comics-info.png"
 import ArrowRight from "icons/slide-arrow-right.svg"
 import ArrowLeft from "icons/slide-arrow-left.svg"
 import PlaystoreIcon from "icons/playstore.svg"
@@ -18,17 +19,60 @@ const ComicsInfo = () => {
     "MVVM",
   ]
 
+  const [selectedImageIndex, setselectedImage] = useState(0)
+
+  const images = [
+    { src: ComicsInfoImg, alt: "Comics Info tela 1" },
+    { src: ComicsInfoImg2, alt: "Comics Info tela 2" },
+  ]
+
+  const hasNext = selectedImageIndex < images.length - 1
+  const hasPrev = selectedImageIndex > 0
+  const showLeftArrow = hasPrev ? "visible" : "hidden"
+  const showRightArrow = hasNext ? "visible" : "hidden"
+
+  const handleClickArrowRight = (e) => {
+    if (hasNext) {
+      setselectedImage((prevState) => prevState + 1)
+    }
+  }
+
+  const handleClickArrowLeft = (e) => {
+    if (hasPrev) {
+      setselectedImage((prevState) => prevState - 1)
+    }
+  }
+
   return (
     <>
       <Header />
       <Container className="container" id="portfolio">
         <SlideContainer>
-          <img src={ArrowLeft} alt="" />
-          <ProjectImage src={ComicsInfoImg} alt="" />
-          <img src={ArrowRight} alt="" />
+          <img
+            id="arrow-left"
+            style={{ visibility: showLeftArrow }}
+            className="arrow"
+            src={ArrowLeft}
+            alt=""
+            onClick={handleClickArrowLeft}
+          />
+          <ProjectImages selectedImageIndex={selectedImageIndex}>
+            {images?.map((image) => (
+              <img key={image.alt} src={image.src} alt={image.alt} />
+            ))}
+          </ProjectImages>
+          <img
+            id="arrow-right"
+            style={{ visibility: showRightArrow }}
+            className="arrow"
+            src={ArrowRight}
+            alt=""
+            onClick={handleClickArrowRight}
+          />
         </SlideContainer>
         <InfoContainer>
-          <h3 className="font-1-l cor-1">Comics Info</h3>
+          <h2 className="fon-1-l cor-0">Comics Info</h2>
+
           <p className="font-2-s cor-3">
             Comics Info, é um cliente App para a Marvel API, que obtém
             informações sobre as HQ's Marvel. Desenvolvido em Kotlin, utilizando
@@ -88,11 +132,18 @@ const ComicsInfo = () => {
 
 const Container = styled("article")`
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   justify-items: center;
   align-items: start;
   gap: 0px 60px;
   padding: 0px 20px 60px 20px;
+
+  @media (max-width: 900px) {
+    justify-content: center;
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    padding-bottom: 10px;
+  }
 `
 
 const SlideContainer = styled("div")`
@@ -101,11 +152,29 @@ const SlideContainer = styled("div")`
   gap: 0px 20px;
   align-items: center;
   justify-items: center;
+
+  .arrow {
+    padding: 0px 10px;
+  }
 `
 
-const ProjectImage = styled("img")`
-  /* transform: scale(0.8); */
+const ProjectImages = styled("div")`
+  --selected-image: calc(
+    ${({ selectedImageIndex }) => -(selectedImageIndex * 100)}%
+  );
+  display: flex;
+  overflow: hidden;
+  max-width: 300px;
   max-height: 600px;
+
+  img {
+    padding-right: 5px;
+    transform: ${({ selectedImageIndex }) => {
+      if (selectedImageIndex == 0) return "none"
+      else return "translateX(var(--selected-image))"
+    }};
+    transition: 0.3s;
+  }
 `
 
 const InfoContainer = styled("div")`
@@ -122,6 +191,10 @@ const TechnologiesContainer = styled("article")`
   justify-content: start;
   align-items: center;
   padding-top: 34px;
+
+  @media (max-width: 480px) {
+    justify-content: center;
+  }
 `
 
 const LinksContainer = styled("div")`
@@ -130,6 +203,10 @@ const LinksContainer = styled("div")`
   column-gap: 16px;
   justify-content: space-between;
   padding: 40px 0px;
+
+  @media (max-width: 480px) {
+    justify-content: center;
+  }
 `
 
 const LinkButton = styled("div")`
