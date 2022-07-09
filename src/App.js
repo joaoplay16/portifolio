@@ -1,9 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
-import { HOME } from 'routes';
+import { COMICS_INFO, HOME } from 'routes';
 
 const Home = React.lazy(
   () => import('pages/home')
+)
+
+const ComicsInfo = React.lazy(
+  () => import('pages/comics-info')
 )
 
 function App() {
@@ -11,6 +15,7 @@ function App() {
     <BrowserRouter>
       <Routes>
           <Route path={HOME} element={<Home/>}/>
+          <Route path={COMICS_INFO} element={<ComicsInfo/>}/>
       </Routes>
     </BrowserRouter>
   );
