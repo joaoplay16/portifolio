@@ -30,7 +30,7 @@ const Portfolio = ({ title }) => {
             "Datastore",
             "MVVM",
           ]}
-          link="/">
+          link={COMICS_INFO}>
           Comics Info, é um cliente App para a Marvel API, que obtém informações
           sobre as HQ's Marvel. Desenvolvido em Kotlin, utilizando o UI kit
           Jetpack Compose.
@@ -51,7 +51,7 @@ const Portfolio = ({ title }) => {
             "Firestore",
             "Analytics",
           ]}
-          link="/">
+          link={SETIME}>
           Setime é um aplicativo de agendamento com armazenamento de dados em
           nuvem desenvolvido para um salão de beleza, para que os esteticistas
           pudessem organizar seus horários de atendim...
@@ -71,7 +71,7 @@ const Portfolio = ({ title }) => {
             "Recycleview",
             "Swipe To Delete",
           ]}
-          link="/">
+          link={ANIME_VIEW}>
           Anime View é um criador de lembretes dos últimos episódios de séries
           de animes assistidos, chegou a +400 downloads no Google Play,
           suportando 177 países em 4 idiomas.
@@ -91,7 +91,7 @@ const Portfolio = ({ title }) => {
             "Mercado Pago",
             "Authentication",
           ]}
-          link="/">
+          link={AGENDAMENTO_WEB}>
           Agendamento Web é um sistema web de auto-agendamento para serviços de
           estética. Permite que o cliente escolha a procedimento, profissional,
           data e método de pagamento do aten...
@@ -113,7 +113,7 @@ const Portfolio = ({ title }) => {
             "MVC",
             "REST",
           ]}
-          link="/">
+          link={PROJETO_VAMOS}>
           Projeto Vamos. Desenvolvido para automacão dos processos e
           gerenciamento dados da ONG para permitir uma maior praticidade na
           gestão da informação e controle de...
