@@ -6,96 +6,132 @@ import AnimeViewCover from "img/animeview.webp"
 import SetimeCover from "img/setme.png"
 import AgendamentoWebCover from "img/agendamento-web.jpg"
 import ProjetoVamosCover from "img/projeto-vamos.jpg"
+import { useLocation } from "react-router-dom"
+import { AGENDAMENTO_WEB, ANIME_VIEW, COMICS_INFO, PROJETO_VAMOS, SETIME } from "routes"
 
-const Portfolio = ({title}) => {
+const Portfolio = ({ title }) => {
+  const currentProject = useLocation().pathname.replace("/", "")
+  console.log("currentProject", currentProject)
+
+  const projects = [
+    {
+      id: COMICS_INFO.replace('/',''),
+      component: (
+        <PortfolioItem
+          image={ComicsInfoCover}
+          imageDescription="Aplicativo Comics Info"
+          technologies={[
+            "Kotlin",
+            "Room",
+            "Paging3",
+            "Dagger/Hilt",
+            "Room",
+            "Coil",
+            "Datastore",
+            "MVVM",
+          ]}
+          link="/">
+          Comics Info, é um cliente App para a Marvel API, que obtém informações
+          sobre as HQ's Marvel. Desenvolvido em Kotlin, utilizando o UI kit
+          Jetpack Compose.
+        </PortfolioItem>
+      ),
+    },
+    {
+      id: SETIME.replace('/',''),
+      component: (
+        <PortfolioItem
+          image={SetimeCover}
+          imageDescription="Aplicativo Setime"
+          technologies={[
+            "RecycleView",
+            "Kotlin",
+            "Swipe To Delete",
+            "Firebase",
+            "Firestore",
+            "Analytics",
+          ]}
+          link="/">
+          Setime é um aplicativo de agendamento com armazenamento de dados em
+          nuvem desenvolvido para um salão de beleza, para que os esteticistas
+          pudessem organizar seus horários de atendim...
+        </PortfolioItem>
+      ),
+    },
+    {
+      id: ANIME_VIEW.replace('/',''),
+      component: (
+        <PortfolioItem
+          image={AnimeViewCover}
+          imageDescription="Aplicativo Anime View"
+          technologies={[
+            "Java",
+            "SQLite",
+            "Content Provider",
+            "Recycleview",
+            "Swipe To Delete",
+          ]}
+          link="/">
+          Anime View é um criador de lembretes dos últimos episódios de séries
+          de animes assistidos, chegou a +400 downloads no Google Play,
+          suportando 177 países em 4 idiomas.
+        </PortfolioItem>
+      ),
+    },
+    {
+      id: AGENDAMENTO_WEB.replace('/',''),
+      component: (
+        <PortfolioItem
+          image={AgendamentoWebCover}
+          imageDescription="Sistema agendamento web"
+          technologies={[
+            "React",
+            "MaterialUI",
+            "Firestore",
+            "Mercado Pago",
+            "Authentication",
+          ]}
+          link="/">
+          Agendamento Web é um sistema web de auto-agendamento para serviços de
+          estética. Permite que o cliente escolha a procedimento, profissional,
+          data e método de pagamento do aten...
+        </PortfolioItem>
+      ),
+    },
+    {
+      id: PROJETO_VAMOS.replace('/',''),
+      component: (
+        <PortfolioItem
+          image={ProjetoVamosCover}
+          imageDescription="Sistema projeto vamos"
+          technologies={[
+            "React",
+            "Bootstrap",
+            "NodeJS",
+            "JWT",
+            "MongoDB",
+            "MVC",
+            "REST",
+          ]}
+          link="/">
+          Projeto Vamos. Desenvolvido para automacão dos processos e
+          gerenciamento dados da ONG para permitir uma maior praticidade na
+          gestão da informação e controle de...
+        </PortfolioItem>
+      ),
+    },
+  ].filter((project) => project.id !== currentProject)
+
   return (
     <>
       <div className="container" id="portfolio">
         {title}
-      </div>  
-    <PortfolioArticle  className="container">
-      <PortfolioItem
-        image={ComicsInfoCover}
-        imageDescription="Aplicativo Comics Info"
-        technologies={[
-          "Kotlin",
-          "Room",
-          "Paging3",
-          "Dagger/Hilt",
-          "Room",
-          "Coil",
-          "Datastore",
-          "MVVM",
-        ]}
-        link="/">
-        Comics Info, é um cliente App para a Marvel API, que obtém informações
-        sobre as HQ's Marvel. Desenvolvido em Kotlin, utilizando o UI kit
-        Jetpack Compose.
-      </PortfolioItem>
-      <PortfolioItem
-        image={SetimeCover}
-        imageDescription="Aplicativo Setime"
-        technologies={[
-          "RecycleView",
-          "Kotlin",
-          "Swipe To Delete",
-          "Firebase",
-          "Firestore",
-          "Analytics",
-        ]}
-        link="/">
-        Setime é um aplicativo de agendamento com armazenamento de dados em
-        nuvem desenvolvido para um salão de beleza, para que os esteticistas
-        pudessem organizar seus horários de atendim...
-      </PortfolioItem>
-      <PortfolioItem
-        image={AnimeViewCover}
-        imageDescription="Aplicativo Anime View"
-        technologies={[
-          "Java",
-          "SQLite",
-          "Content Provider",
-          "Recycleview",
-          "Swipe To Delete",
-        ]}
-        link="/">
-        Anime View é um criador de lembretes dos últimos episódios de séries de
-        animes assistidos, chegou a +400 downloads no Google Play, suportando
-        177 países em 4 idiomas.
-      </PortfolioItem>
-      <PortfolioItem
-        image={AgendamentoWebCover}
-        imageDescription="Sistema agendamento web"
-        technologies={[
-          "React",
-          "MaterialUI",
-          "Firestore",
-          "Mercado Pago",
-          "Authentication",
-        ]}
-        link="/">
-        Agendamento Web é um sistema web de auto-agendamento para serviços de
-        estética. Permite que o cliente escolha a procedimento, profissional,
-        data e método de pagamento do aten...
-      </PortfolioItem>
-      <PortfolioItem
-        image={ProjetoVamosCover}
-        imageDescription="Sistema projeto vamos"
-        technologies={[
-          "React",
-          "Bootstrap",
-          "NodeJS",
-          "JWT",
-          "MongoDB",
-          "MVC",
-          "REST",
-        ]}
-        link="/">
-        Projeto Vamos. Desenvolvido para automacão dos processos e gerenciamento
-        dados da ONG para permitir uma maior praticidade na gestão da informação
-        e controle de...
-      </PortfolioItem>
-    </PortfolioArticle>
+      </div>
+      <PortfolioArticle className="container">
+        {projects.map((project) => (
+          <React.Fragment key={project.id}>{project.component}</React.Fragment>
+        ))}
+      </PortfolioArticle>
     </>
   )
 }
