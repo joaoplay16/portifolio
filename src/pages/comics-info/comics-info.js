@@ -1,4 +1,4 @@
-import { Chip, Footer, Header, LinkButton } from "components"
+import { Chip, Footer, Header, LinkButton, Subtitle } from "components"
 import React, { useState } from "react"
 import styled from "styled-components"
 import ComicsInfoImg from "img/comics-info.png"
@@ -7,6 +7,7 @@ import ArrowRight from "icons/slide-arrow-right.svg"
 import ArrowLeft from "icons/slide-arrow-left.svg"
 import PlaystoreIcon from "icons/playstore.svg"
 import GithubIcon from "icons/github.svg"
+import Portfolio from "pages/home/portifolio/portfolio"
 const ComicsInfo = () => {
   const projectTechnologies = [
     "Kotlin",
@@ -46,7 +47,7 @@ const ComicsInfo = () => {
   return (
     <>
       <Header />
-      <Container className="container" id="portfolio">
+      <ProjectContainer className="container">
         <SlideContainer>
           <img
             id="arrow-left"
@@ -124,13 +125,16 @@ const ComicsInfo = () => {
             </LinkButtonWithIcon>
           </LinksContainer>
         </InfoContainer>
-      </Container>
+      </ProjectContainer>
+      <PortifolioContainer>
+        <Portfolio title={<Subtitle>Mais Projetos</Subtitle>} />
+      </PortifolioContainer>
       <Footer id="contact" />
     </>
   )
 }
 
-const Container = styled("article")`
+const ProjectContainer = styled("div")`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   justify-items: center;
@@ -215,5 +219,14 @@ const LinkButtonWithIcon = styled("div")`
   align-items: flex-end;
 `
 
+const PortifolioContainer = styled("article")`
+  background-color: var(--cor-s4);
+  padding-top: 60px;
+  padding-bottom: 30px;
+
+  @media (max-width: 800px) {
+    padding-top: 40px;
+  }
+`
 
 export default ComicsInfo
