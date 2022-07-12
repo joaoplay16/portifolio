@@ -21,9 +21,9 @@ const AnimeView = () => {
   const [selectedImageIndex, setselectedImage] = useState(0)
 
   const images = [
-    { src: AnimeViewImg, alt: "Comics Info tela 1" },
-    { src: AnimeViewImg_2, alt: "Comics Info tela 2" },
-    { src: AnimeViewImg_3, alt: "Comics Info tela 3" },
+    { src: AnimeViewImg, alt: "Anime View tela 1" },
+    { src: AnimeViewImg_2, alt: "Anime View tela 2" },
+    { src: AnimeViewImg_3, alt: "Anime View tela 3" },
   ]
 
   const hasNext = selectedImageIndex < images.length - 1
