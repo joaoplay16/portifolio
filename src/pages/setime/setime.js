@@ -105,7 +105,7 @@ const Setime = () => {
                 className="font-2-xs cor-0 googleplay"
                 href="https://github.com/joaoplay16/setime"
                 target="_blank">
-                github do projeto
+                repositório do projeto
               </LinkButton>
             </LinkButtonWithIcon>
           </LinksContainer>

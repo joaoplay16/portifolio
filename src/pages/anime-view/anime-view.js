@@ -108,7 +108,7 @@ const AnimeView = () => {
                 className="font-2-xs cor-0 googleplay"
                 href="https://github.com/joaoplay16/animeview"
                 target="_blank">
-                github do projeto
+                repositório do projeto
               </LinkButton>
             </LinkButtonWithIcon>
           </LinksContainer>
