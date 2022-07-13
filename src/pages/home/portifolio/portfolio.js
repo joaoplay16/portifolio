@@ -9,7 +9,7 @@ import ProjetoVamosCover from "img/projeto-vamos.jpg"
 import { useLocation } from "react-router-dom"
 import { AGENDAMENTO_WEB, ANIME_VIEW, COMICS_INFO, PROJETO_VAMOS, SETIME } from "routes"
 
-const Portfolio = ({ title }) => {
+const Portfolio = ({ title, itemBackGroundColor }) => {
   const currentProject = useLocation().pathname.replace("/", "")
   console.log("currentProject", currentProject)
 
@@ -30,7 +30,8 @@ const Portfolio = ({ title }) => {
             "Datastore",
             "MVVM",
           ]}
-          link={COMICS_INFO}>
+          link={COMICS_INFO}
+          backgroundColor={itemBackGroundColor}>
           Comics Info, é um cliente App para a Marvel API, que obtém informações
           sobre as HQ's Marvel. Desenvolvido em Kotlin, utilizando o UI kit
           Jetpack Compose.
@@ -51,7 +52,8 @@ const Portfolio = ({ title }) => {
             "Firestore",
             "Analytics",
           ]}
-          link={SETIME}>
+          link={SETIME}
+          backgroundColor={itemBackGroundColor}>
           Setime é um aplicativo de agendamento com armazenamento de dados em
           nuvem desenvolvido para um salão de beleza, para que os esteticistas
           pudessem organizar seus horários de atendim...
@@ -71,7 +73,8 @@ const Portfolio = ({ title }) => {
             "Recycleview",
             "Swipe To Delete",
           ]}
-          link={ANIME_VIEW}>
+          link={ANIME_VIEW}
+          backgroundColor={itemBackGroundColor}>
           Anime View é um criador de lembretes dos últimos episódios de séries
           de animes assistidos, chegou a +400 downloads no Google Play,
           suportando 177 países em 4 idiomas.
@@ -91,7 +94,8 @@ const Portfolio = ({ title }) => {
             "Mercado Pago",
             "Authentication",
           ]}
-          link={AGENDAMENTO_WEB}>
+          link={AGENDAMENTO_WEB}
+          backgroundColor={itemBackGroundColor}>
           Agendamento Web é um sistema web de auto-agendamento para serviços de
           estética. Permite que o cliente escolha a procedimento, profissional,
           data e método de pagamento do aten...
@@ -113,7 +117,8 @@ const Portfolio = ({ title }) => {
             "MVC",
             "REST",
           ]}
-          link={PROJETO_VAMOS}>
+          link={PROJETO_VAMOS}
+          backgroundColor={itemBackGroundColor}>
           Projeto Vamos. Desenvolvido para automacão dos processos e
           gerenciamento dados da ONG para permitir uma maior praticidade na
           gestão da informação e controle de...
