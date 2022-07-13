@@ -136,7 +136,7 @@ const AgendamentoWeb = () => {
         </InfoContainer>
       </ProjectContainer>
       <PortifolioContainer>
-        <Portfolio title={<Subtitle>Mais Projetos</Subtitle>} />
+        <Portfolio itemBackGroundColor="--cor-s2" title={<Subtitle>Mais Projetos</Subtitle>} />
       </PortifolioContainer>
       <Footer id="contact" />
     </>
