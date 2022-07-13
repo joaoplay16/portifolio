@@ -22,7 +22,6 @@ const Portfolio = ({ title, itemBackGroundColor }) => {
           imageDescription="Aplicativo Comics Info"
           technologies={[
             "Kotlin",
-            "Room",
             "Paging3",
             "Dagger/Hilt",
             "Room",
