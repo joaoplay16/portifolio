@@ -11,10 +11,10 @@ const Header = () => {
       </a>
         <nav aria-label="Navegação">
           <HeaderMenu className="header-menu font-1-m-b">
-            <li><NavLink href="#about">Sobre</NavLink></li>
+            <li><NavLink href="/#about">Sobre</NavLink></li>
             <li><NavLink href="#portfolio">Portfólio</NavLink></li>
-            <li><NavLink href="#education">Formação</NavLink></li>
-            <li><NavLink href="#skills">Skills</NavLink></li>
+            <li><NavLink href="/#education">Formação</NavLink></li>
+            <li><NavLink href="/#skills">Skills</NavLink></li>
             <li><NavLink href="#contact">Contato</NavLink></li>
           </HeaderMenu>
         </nav>
