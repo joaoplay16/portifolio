@@ -13,9 +13,10 @@ const Sobre = () => {
           Fullstack
         </h1>
         <p className="font-1-m cor-2">
-          Sou um profissional motivado e autodidata que gosta de resolver
-          problemas. Tenho paixão pela usabilidade e experiência do usuário e
-          conhecimentos técnicos para criar boas experiências digitais.
+          Olá sou João Pedro, sou Desenvolvedor Full Stack com foco no
+          desenvolvimento de aplicações android nativas. <br />
+          Desenvolvi aplicações que impactaram as negócios locais e aplicações
+          que estão sendo usadas por pessoas de diferentes partes do mundo.
         </p>
       </div>
     </Introducao>
