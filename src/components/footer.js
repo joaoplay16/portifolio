@@ -1,9 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import LinkedinIcon from "icons/linkedin.svg"
-import WhatsappIcon from "icons/whatsapp.svg"
-import GithubIcon from "icons/github.svg"
-import PlasystoreIcon from "icons/playstore.svg"
+import {LinkedinIcon, WhatsappIcon,GithubIcon, PlaystoreIcon} from "icons"
+
 
 const Footer = ({id}) => (
   <FooterStyled id={id}>
@@ -42,7 +40,7 @@ const Footer = ({id}) => (
             <a
               href="https://play.google.com/store/apps/developer?id=Play+Lab"
               target="_blank">
-              <img src={PlasystoreIcon} alt="Ícone Playstore" />
+              <img src={PlaystoreIcon} alt="Ícone Playstore" />
             </a>
           </li>
         </ul>
