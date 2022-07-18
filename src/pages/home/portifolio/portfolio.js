@@ -1,11 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 import PortfolioItem from "components/portifolio-item"
-import ComicsInfoCover from "img/comics-info.png"
-import AnimeViewCover from "img/animeview.webp"
-import SetimeCover from "img/setme.png"
-import AgendamentoWebCover from "img/agendamento-web.jpg"
-import ProjetoVamosCover from "img/projeto-vamos.jpg"
+import {
+  ComicsInfoImg,
+  SetimeImg,
+  AnimeViewImg,
+  AgendamentoWebImg,
+  ProjetoVamosImg
+} from "img"
 import { useLocation } from "react-router-dom"
 import { AGENDAMENTO_WEB, ANIME_VIEW, COMICS_INFO, PROJETO_VAMOS, SETIME } from "routes"
 
@@ -18,7 +20,7 @@ const Portfolio = ({ title, itemBackGroundColor }) => {
       id: COMICS_INFO.replace('/',''),
       component: (
         <PortfolioItem
-          image={ComicsInfoCover}
+          image={ComicsInfoImg}
           imageDescription="Aplicativo Comics Info"
           technologies={[
             "Kotlin",
@@ -41,7 +43,7 @@ const Portfolio = ({ title, itemBackGroundColor }) => {
       id: SETIME.replace('/',''),
       component: (
         <PortfolioItem
-          image={SetimeCover}
+          image={SetimeImg}
           imageDescription="Aplicativo Setime"
           technologies={[
             "RecycleView",
@@ -63,7 +65,7 @@ const Portfolio = ({ title, itemBackGroundColor }) => {
       id: ANIME_VIEW.replace('/',''),
       component: (
         <PortfolioItem
-          image={AnimeViewCover}
+          image={AnimeViewImg}
           imageDescription="Aplicativo Anime View"
           technologies={[
             "Java",
@@ -84,7 +86,7 @@ const Portfolio = ({ title, itemBackGroundColor }) => {
       id: AGENDAMENTO_WEB.replace('/',''),
       component: (
         <PortfolioItem
-          image={AgendamentoWebCover}
+          image={AgendamentoWebImg}
           imageDescription="Sistema agendamento web"
           technologies={[
             "React",
@@ -105,7 +107,7 @@ const Portfolio = ({ title, itemBackGroundColor }) => {
       id: PROJETO_VAMOS.replace('/',''),
       component: (
         <PortfolioItem
-          image={ProjetoVamosCover}
+          image={ProjetoVamosImg}
           imageDescription="Sistema projeto vamos"
           technologies={[
             "React",
