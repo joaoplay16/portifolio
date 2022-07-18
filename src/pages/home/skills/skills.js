@@ -1,7 +1,7 @@
 import { Chip } from "components"
 import React from "react"
 import styled from "styled-components"
-import Decorator from "icons/decorator2.svg"
+import { DecoratorIcon_2 } from "icons"
 
 const Skills = ({ title, skillList }) => (
   <SkillsSection id="skills" className="container">
@@ -57,7 +57,7 @@ const SkillsSection = styled("section")`
     content: "";
     display: block;
     position: absolute;
-    background: url(${Decorator});
+    background: url(${DecoratorIcon_2});
     width: 64px;
     height: 82px;
     bottom: -12%;
