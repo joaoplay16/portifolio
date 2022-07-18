@@ -1,12 +1,14 @@
 import { Chip, Footer, Header, LinkButton, Subtitle } from "components"
 import React, { useState } from "react"
 import styled from "styled-components"
-import ComicsInfoImg from "img/comics-info.png"
-import ComicsInfoImg2 from "img/comics-info-2.png"
-import ArrowRight from "icons/slide-arrow-right.svg"
-import ArrowLeft from "icons/slide-arrow-left.svg"
-import PlaystoreIcon from "icons/playstore.svg"
-import GithubIcon from "icons/github.svg"
+import {ComicsInfoImg, ComicsInfoImg_2} from "img"
+import {
+  SlideArrowLeftIcon, 
+  SlideArrowRightIcon,
+  GithubIcon,
+  PlaystoreIcon,
+
+} from "icons"
 import Portfolio from "pages/home/portifolio/portfolio"
 const ComicsInfo = () => {
   const projectTechnologies = [
@@ -24,7 +26,7 @@ const ComicsInfo = () => {
 
   const images = [
     { src: ComicsInfoImg, alt: "Comics Info tela 1" },
-    { src: ComicsInfoImg2, alt: "Comics Info tela 2" },
+    { src: ComicsInfoImg_2, alt: "Comics Info tela 2" },
   ]
 
   const hasNext = selectedImageIndex < images.length - 1
@@ -53,7 +55,7 @@ const ComicsInfo = () => {
             id="arrow-left"
             style={{ visibility: showLeftArrow }}
             className="arrow"
-            src={ArrowLeft}
+            src={SlideArrowLeftIcon}
             alt=""
             onClick={handleClickArrowLeft}
           />
@@ -66,7 +68,7 @@ const ComicsInfo = () => {
             id="arrow-right"
             style={{ visibility: showRightArrow }}
             className="arrow"
-            src={ArrowRight}
+            src={SlideArrowRightIcon}
             alt=""
             onClick={handleClickArrowRight}
           />
