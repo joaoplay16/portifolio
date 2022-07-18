@@ -1,8 +1,8 @@
 import React from "react"
 import { Subtitle } from "components"
 import styled from "styled-components"
-import MeritAwardImage from "img/merit-award.webp"
-import TranslateIcon from "icons/translate.svg"
+import { MeritAwardImg } from "img"
+import { TranslateIcon } from "icons"
 const Formacao = () => (
   <EducationSection id="education">
     <div className="container">
@@ -12,7 +12,7 @@ const Formacao = () => (
       <img
         width={400}
         height={530}
-        src={MeritAwardImage}
+        src={MeritAwardImg}
         alt="Prêmio de Honra ao Mérito, segundo lugar"
       />
 
