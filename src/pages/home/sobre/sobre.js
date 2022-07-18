@@ -1,6 +1,6 @@
 import React from "react"
-import ProfileImg from "img/profile.png"
-import IconDecorator from "icons/decorator1.svg"
+import { ProfileImg } from "img"
+import { DecoratorIcon} from "icons"
 import styled from "styled-components"
 
 const Sobre = () => {
@@ -40,7 +40,7 @@ const Introducao = styled("main")`
     position: absolute;
     width: 90px;
     height: 115px;
-    background: url(${IconDecorator}) no-repeat center;
+    background: url(${DecoratorIcon}) no-repeat center;
     top: -20px;
     left: -10px;
     z-index: -1;
