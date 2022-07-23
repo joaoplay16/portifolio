@@ -16,7 +16,7 @@ const Home = () => {
       <Skills 
         title={<Subtitle>Skills</Subtitle>}
         skillList={
-          ['Android', 'Kotlin', 'Java','javascript','ReactJS',
+          ['Android', 'Kotlin', 'Java','Javascript','ReactJS',
           'NodeJS','REST', 'SQLite','MySQL','MongoDB']
         }
       />
