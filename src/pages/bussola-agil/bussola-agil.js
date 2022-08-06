@@ -85,14 +85,14 @@ const BussolaAgil = () => {
 
           <p className="font-2-s cor-3">
             Bússola Ágil é um app de bússola simples e preciso com um design
-            bonito e moderno possui tema escuro e diferentes estilos de bússola.
+            bonito e moderno, possui tema escuro e diferentes estilos de bússola.
             Desenvolvido em Kotlin, utilizando o UI kit Jetpack Compose.
           </p>
           <ul>
             <li className="font-2-s cor-3">
               Neste projeto utilizei a classe SensorManager para obter acesso
               aos sensores de campo geomagnético e acelerômetro do dispositivo e
-              com as leituras destes dois sensores determinar a posição do
+              com as leituras destes dois sensores, determinar a posição do
               dispositivo em relação o polo norte magnético.
             </li>
             <br />
