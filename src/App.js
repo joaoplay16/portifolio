@@ -1,3 +1,4 @@
+import BussolaAgil from "pages/bussola-agil"
 import React from "react"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import {
@@ -5,6 +6,7 @@ import {
   ANIME_VIEW,
   HOME,
   SETIME,
+  BUSSOLA_AGIL,
   AGENDAMENTO_WEB,
   PROJETO_VAMOS,
 } from "routes"
@@ -28,6 +30,7 @@ function App() {
         <Route path={HOME} element={<Home />} />
         <Route path={COMICS_INFO} element={<ComicsInfo />} />
         <Route path={ANIME_VIEW} element={<AnimeView />} />
+        <Route path={BUSSOLA_AGIL} element={<BussolaAgil />} />
         <Route path={SETIME} element={<Setime />} />
         <Route path={AGENDAMENTO_WEB} element={<AgendamentoWeb />} />
         <Route path={PROJETO_VAMOS} element={<ProjetoVamos />} />
