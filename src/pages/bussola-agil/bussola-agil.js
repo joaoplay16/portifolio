@@ -1,7 +1,14 @@
 import { Chip, Footer, Header, LinkButton, Subtitle } from "components"
 import React, { useState } from "react"
 import styled from "styled-components"
-import {} from "img"
+import { 
+  BussolaAgilDarkGif,
+  BussolaAgilLightGif,
+  BussolaAgilImg_2,
+  BussolaAgilImg_3,
+  BussolaAgilImg_5,
+  BussolaAgilImg_6,
+} from "img"
 import {
   SlideArrowLeftIcon,
   SlideArrowRightIcon,
@@ -20,7 +27,14 @@ const BussolaAgil = () => {
 
   const [selectedImageIndex, setselectedImage] = useState(0)
 
-  const images = [{ src: null, alt: "" }]
+  const images = [
+    { src: BussolaAgilLightGif, alt: "Bússola Ágil, tema claro, gif" },
+    { src: BussolaAgilImg_5, alt: "Bússola Ágil, home, tema claro, widget minimalista" },
+    { src: BussolaAgilImg_6, alt: "Bússola Ágil, tema claro, tela de seleção de widget" },
+    { src: BussolaAgilDarkGif, alt: "Bússola Ágil, tema escuro, gif" },
+    { src: BussolaAgilImg_2, alt: "Bússola Ágil, home, tema escuro, widget minimalista" },
+    { src: BussolaAgilImg_3, alt: "Bússola Ágil, tema escuro, tela de seleção de widget" }
+  ]
 
   const hasNext = selectedImageIndex < images.length - 1
   const hasPrev = selectedImageIndex > 0
@@ -83,8 +97,8 @@ const BussolaAgil = () => {
             </li>
             <br />
             <li className="font-2-s cor-3">
-              Utilizei DataStore como solução de armazenamento de dados para salvar
-              o widget de bússola selecionado.
+              Utilizei DataStore como solução de armazenamento de dados para
+              salvar o widget de bússola selecionado.
             </li>
           </ul>
           <TechnologiesContainer>
