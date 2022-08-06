@@ -6,16 +6,36 @@ import {
   SetimeImg,
   AnimeViewImg,
   AgendamentoWebImg,
-  ProjetoVamosImg
+  ProjetoVamosImg,
+  BussolaAgilCoverImg
 } from "img"
 import { useLocation } from "react-router-dom"
-import { AGENDAMENTO_WEB, ANIME_VIEW, COMICS_INFO, PROJETO_VAMOS, SETIME } from "routes"
+import { AGENDAMENTO_WEB, ANIME_VIEW, BUSSOLA_AGIL, COMICS_INFO, PROJETO_VAMOS, SETIME } from "routes"
 
 const Portfolio = ({ title, itemBackGroundColor }) => {
   const currentProject = useLocation().pathname.replace("/", "")
-  console.log("currentProject", currentProject)
 
   const projects = [
+    {
+      id: BUSSOLA_AGIL.replace('/',''),
+      component: (
+        <PortfolioItem
+          image={BussolaAgilCoverImg}
+          imageDescription="Aplicativo Bússola Ágil"
+          technologies={[
+            "Kotlin",
+            "Jetpack Compose",
+            "Sensor Manager",
+            "Datastore",
+          ]}
+          link={BUSSOLA_AGIL}
+          backgroundColor={itemBackGroundColor}>
+          Bússola Ágil é um app de bússola simples e preciso com um design bonito e moderno
+          com diferentes estilos de bússola. Desenvolvido em Kotlin, utilizando o UI kit
+          Jetpack Compose.
+        </PortfolioItem>
+      ),
+    },
     {
       id: COMICS_INFO.replace('/',''),
       component: (
