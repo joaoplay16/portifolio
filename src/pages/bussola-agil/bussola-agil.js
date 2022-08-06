@@ -3,11 +3,10 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import {} from "img"
 import {
-  SlideArrowLeftIcon, 
+  SlideArrowLeftIcon,
   SlideArrowRightIcon,
   GithubIcon,
   PlaystoreIcon,
-
 } from "icons"
 import Portfolio from "pages/home/portifolio/portfolio"
 const BussolaAgil = () => {
@@ -21,9 +20,7 @@ const BussolaAgil = () => {
 
   const [selectedImageIndex, setselectedImage] = useState(0)
 
-  const images = [
-    { src: null, alt: "" },
-  ]
+  const images = [{ src: null, alt: "" }]
 
   const hasNext = selectedImageIndex < images.length - 1
   const hasPrev = selectedImageIndex > 0
@@ -73,15 +70,21 @@ const BussolaAgil = () => {
           <h2 className="fon-1-l cor-0">Bússola Ágil</h2>
 
           <p className="font-2-s cor-3">
-             {/* TODO(project description)*/}
+            Bússola Ágil é um app de bússola simples e preciso com um design
+            bonito e moderno possui tema escuro e diferentes estilos de bússola.
+            Desenvolvido em Kotlin, utilizando o UI kit Jetpack Compose.
           </p>
           <ul>
             <li className="font-2-s cor-3">
-             {/* TODO(detailed description)*/}
+              Neste projeto utilizei a classe SensorManager para obter acesso
+              aos sensores de campo geomagnético e acelerômetro do dispositivo e
+              com as leituras destes dois sensores determinar a posição do
+              dispositivo em relação o polo norte magnético.
             </li>
             <br />
             <li className="font-2-s cor-3">
-             {/* TODO(detailed description)*/}
+              Utilizei DataStore como solução de armazenamento de dados para salvar
+              o widget de bússola selecionado.
             </li>
           </ul>
           <TechnologiesContainer>
@@ -103,7 +106,8 @@ const BussolaAgil = () => {
               <img src={PlaystoreIcon} alt="Ícone Google Play" />
               <LinkButton
                 className="font-2-xs cor-0 googleplay"
-                href="https://play.google.com/store/apps/details?id=com.playlab.bussolaagil">
+                href="https://play.google.com/store/apps/details?id=com.playlab.bussolaagil"
+                target="_blank">
                 ver no google play
               </LinkButton>
             </LinkButtonWithIcon>
@@ -111,7 +115,8 @@ const BussolaAgil = () => {
               <img src={GithubIcon} alt="Ícone Github" />
               <LinkButton
                 className="font-2-xs cor-0 googleplay"
-                href="https://github.com/joaoplay16/bussola-agil">
+                href="https://github.com/joaoplay16/bussola-agil"
+                target="_blank">
                 repositório do projeto
               </LinkButton>
             </LinkButtonWithIcon>
@@ -119,7 +124,10 @@ const BussolaAgil = () => {
         </InfoContainer>
       </ProjectContainer>
       <PortifolioContainer>
-        <Portfolio itemBackGroundColor="--cor-s2" title={<Subtitle>Mais Projetos</Subtitle>} />
+        <Portfolio
+          itemBackGroundColor="--cor-s2"
+          title={<Subtitle>Mais Projetos</Subtitle>}
+        />
       </PortifolioContainer>
       <Footer id="contact" />
     </>
