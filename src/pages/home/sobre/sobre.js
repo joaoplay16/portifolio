@@ -10,7 +10,7 @@ const Sobre = () => {
       <div>
         <h1 className="font-1-xxl cor-1">
           Desenvolvedor <br />
-          Fullstack
+          Full-Stack
         </h1>
         <p className="font-1-m cor-2">
           Olá sou João Pedro, sou Desenvolvedor Full Stack com foco no
