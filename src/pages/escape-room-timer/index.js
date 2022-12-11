@@ -1,0 +1,1 @@
+export { default } from './escape-room-timer'
