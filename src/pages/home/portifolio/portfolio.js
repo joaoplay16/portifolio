@@ -7,17 +7,42 @@ import {
   AnimeViewImg,
   AgendamentoWebImg,
   ProjetoVamosImg,
-  BussolaAgilCoverImg
+  BussolaAgilCoverImg,
+  EscapeRoomTimerGif,
 } from "img"
 import { useLocation } from "react-router-dom"
-import { AGENDAMENTO_WEB, ANIME_VIEW, BUSSOLA_AGIL, COMICS_INFO, PROJETO_VAMOS, SETIME } from "routes"
+import {
+  AGENDAMENTO_WEB,
+  ANIME_VIEW,
+  BUSSOLA_AGIL,
+  COMICS_INFO,
+  PROJETO_VAMOS,
+  SETIME,
+  ESCAPE_ROOM_TIMER,
+} from "routes"
 
 const Portfolio = ({ title, itemBackGroundColor }) => {
   const currentProject = useLocation().pathname.replace("/", "")
 
   const projects = [
     {
-      id: BUSSOLA_AGIL.replace('/',''),
+      id: ESCAPE_ROOM_TIMER.replace("/", ""),
+      component: (
+        <PortfolioItem
+          image={EscapeRoomTimerGif}
+          imageDescription="Aplicativo Escape Room Timer"
+          technologies={["Kotlin", "Jetpack Compose", "MVVM", "MediaPlayer Api", "Coroutines"]}
+          link={ESCAPE_ROOM_TIMER}
+          backgroundColor={itemBackGroundColor}>
+          Escape Room Timer é um app que simula uma bomba relógio, tente desarmá-la
+          antes que exploda, erre o código e o tempo encurtará e tudo irá pelos
+          ares. Pode ser usado em partidas de Airsoft, Paintball ou em
+          casa. Feito para divertir com os amigos.
+        </PortfolioItem>
+      ),
+    },
+    {
+      id: BUSSOLA_AGIL.replace("/", ""),
       component: (
         <PortfolioItem
           image={BussolaAgilCoverImg}
@@ -30,14 +55,14 @@ const Portfolio = ({ title, itemBackGroundColor }) => {
           ]}
           link={BUSSOLA_AGIL}
           backgroundColor={itemBackGroundColor}>
-          Bússola Ágil é um app de bússola simples e preciso com um design bonito e moderno
-          com diferentes estilos de bússola. Desenvolvido em Kotlin, utilizando o UI kit
-          Jetpack Compose.
+          Bússola Ágil é um app de bússola simples e preciso com um design
+          bonito e moderno com diferentes estilos de bússola. Desenvolvido em
+          Kotlin, utilizando o UI kit Jetpack Compose.
         </PortfolioItem>
       ),
     },
     {
-      id: COMICS_INFO.replace('/',''),
+      id: COMICS_INFO.replace("/", ""),
       component: (
         <PortfolioItem
           image={ComicsInfoImg}
@@ -60,7 +85,7 @@ const Portfolio = ({ title, itemBackGroundColor }) => {
       ),
     },
     {
-      id: SETIME.replace('/',''),
+      id: SETIME.replace("/", ""),
       component: (
         <PortfolioItem
           image={SetimeImg}
@@ -82,7 +107,7 @@ const Portfolio = ({ title, itemBackGroundColor }) => {
       ),
     },
     {
-      id: ANIME_VIEW.replace('/',''),
+      id: ANIME_VIEW.replace("/", ""),
       component: (
         <PortfolioItem
           image={AnimeViewImg}
@@ -103,7 +128,7 @@ const Portfolio = ({ title, itemBackGroundColor }) => {
       ),
     },
     {
-      id: AGENDAMENTO_WEB.replace('/',''),
+      id: AGENDAMENTO_WEB.replace("/", ""),
       component: (
         <PortfolioItem
           image={AgendamentoWebImg}
@@ -124,7 +149,7 @@ const Portfolio = ({ title, itemBackGroundColor }) => {
       ),
     },
     {
-      id: PROJETO_VAMOS.replace('/',''),
+      id: PROJETO_VAMOS.replace("/", ""),
       component: (
         <PortfolioItem
           image={ProjetoVamosImg}
