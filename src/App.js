@@ -9,6 +9,7 @@ import {
   BUSSOLA_AGIL,
   AGENDAMENTO_WEB,
   PROJETO_VAMOS,
+  ESCAPE_ROOM_TIMER,
 } from "routes"
 
 const Home = React.lazy(() => import("pages/home"))
@@ -23,6 +24,8 @@ const AgendamentoWeb = React.lazy(() => import("pages/agendamento-web"))
 
 const ProjetoVamos = React.lazy(() => import("pages/projeto-vamos"))
 
+const EscapeRoomTimer = React.lazy(() => import("pages/escape-room-timer"))
+
 function App() {
   return (
     <BrowserRouter>
@@ -34,6 +37,7 @@ function App() {
         <Route path={SETIME} element={<Setime />} />
         <Route path={AGENDAMENTO_WEB} element={<AgendamentoWeb />} />
         <Route path={PROJETO_VAMOS} element={<ProjetoVamos />} />
+        <Route path={ESCAPE_ROOM_TIMER} element={<EscapeRoomTimer />} />
       </Routes>
     </BrowserRouter>
   )
