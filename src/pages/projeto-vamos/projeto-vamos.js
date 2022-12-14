@@ -24,7 +24,7 @@ const AgendamentoWeb = () => {
     "REST",
   ]
 
-  const [selectedImageIndex, setselectedImage] = useState(0)
+  const [selectedImageIndex, setSelectedImage] = useState(0)
 
   const images = [
     { src: ProjetoVamosImg_2, alt: "Projeto Vamos tela 1" },
@@ -41,13 +41,13 @@ const AgendamentoWeb = () => {
 
   const handleClickArrowRight = (e) => {
     if (hasNext) {
-      setselectedImage((prevState) => prevState + 1)
+      setSelectedImage((prevState) => prevState + 1)
     }
   }
 
   const handleClickArrowLeft = (e) => {
     if (hasPrev) {
-      setselectedImage((prevState) => prevState - 1)
+      setSelectedImage((prevState) => prevState - 1)
     }
   }
 

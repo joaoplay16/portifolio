@@ -18,7 +18,7 @@ const AnimeView = () => {
     "Swipe To Delete",
   ]
 
-  const [selectedImageIndex, setselectedImage] = useState(0)
+  const [selectedImageIndex, setSelectedImage] = useState(0)
 
   const images = [
     { src: AnimeViewImg, alt: "Anime View tela 1" },
@@ -33,13 +33,13 @@ const AnimeView = () => {
 
   const handleClickArrowRight = (e) => {
     if (hasNext) {
-      setselectedImage((prevState) => prevState + 1)
+      setSelectedImage((prevState) => prevState + 1)
     }
   }
 
   const handleClickArrowLeft = (e) => {
     if (hasPrev) {
-      setselectedImage((prevState) => prevState - 1)
+      setSelectedImage((prevState) => prevState - 1)
     }
   }
 

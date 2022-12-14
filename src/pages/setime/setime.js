@@ -14,7 +14,7 @@ const Setime = () => {
     "Analytics",
   ]
 
-  const [selectedImageIndex, setselectedImage] = useState(0)
+  const [selectedImageIndex, setSelectedImage] = useState(0)
 
   const images = [
     { src: SetimeImg, alt: "Setime tela 1" },
@@ -29,13 +29,13 @@ const Setime = () => {
 
   const handleClickArrowRight = (e) => {
     if (hasNext) {
-      setselectedImage((prevState) => prevState + 1)
+      setSelectedImage((prevState) => prevState + 1)
     }
   }
 
   const handleClickArrowLeft = (e) => {
     if (hasPrev) {
-      setselectedImage((prevState) => prevState - 1)
+      setSelectedImage((prevState) => prevState - 1)
     }
   }
 

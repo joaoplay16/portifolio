@@ -22,7 +22,7 @@ const ComicsInfo = () => {
     "MVVM",
   ]
 
-  const [selectedImageIndex, setselectedImage] = useState(0)
+  const [selectedImageIndex, setSelectedImage] = useState(0)
 
   const images = [
     { src: ComicsInfoImg, alt: "Comics Info tela 1" },
@@ -36,13 +36,13 @@ const ComicsInfo = () => {
 
   const handleClickArrowRight = (e) => {
     if (hasNext) {
-      setselectedImage((prevState) => prevState + 1)
+      setSelectedImage((prevState) => prevState + 1)
     }
   }
 
   const handleClickArrowLeft = (e) => {
     if (hasPrev) {
-      setselectedImage((prevState) => prevState - 1)
+      setSelectedImage((prevState) => prevState - 1)
     }
   }
 
