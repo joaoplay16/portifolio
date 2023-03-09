@@ -117,7 +117,7 @@ const EscapeRoomTimer = () => {
               <img src={PlaystoreIcon} alt="Ícone Google Play" />
               <LinkButton
                 className="font-2-xs cor-0 googleplay"
-                href="https://play.google.com/store/apps/developer?id=Play+Lab" target="_blank">
+                href="https://play.google.com/store/apps/details?id=com.playlab.escaperoomtimer" target="_blank">
                 ver no google play
               </LinkButton>
             </LinkButtonWithIcon>
