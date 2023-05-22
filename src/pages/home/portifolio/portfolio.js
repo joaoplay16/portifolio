@@ -9,6 +9,7 @@ import {
   ProjetoVamosImg,
   BussolaAgilCoverImg,
   EscapeRoomTimerGif,
+  SuperPomodoroCover,
 } from "img"
 import { useLocation } from "react-router-dom"
 import {
@@ -19,6 +20,7 @@ import {
   PROJETO_VAMOS,
   SETIME,
   ESCAPE_ROOM_TIMER,
+  SUPER_POMODORO,
 } from "routes"
 
 const Portfolio = ({ title, itemBackGroundColor }) => {
@@ -26,17 +28,51 @@ const Portfolio = ({ title, itemBackGroundColor }) => {
 
   const projects = [
     {
+      id: SUPER_POMODORO.replace("/", ""),
+      component: (
+        <PortfolioItem
+          image={SuperPomodoroCover}
+          imageDescription="Aplicativo Super Pomodoro"
+          technologies={[
+            "Kotlin",
+            "Jetpack Compose",
+            "Firebase",
+            "Authentication",
+            "Dagger/Hilt",
+            "Datastore",
+            "Coil",
+            "MVVM",
+          ]}
+          link={SUPER_POMODORO}
+          backgroundColor={itemBackGroundColor}
+        >
+          O Super Pomodoro é um aplicativo de gerenciamento de tempo projetado
+          para aumentar a produtividade dos usuários por meio da técnica do
+          Pomodoro. Com recursos avançados, como chat em grupo e jogos para os
+          momentos de pausa, o Super Pomodoro oferece uma experiência única e
+          enriquecedora.
+        </PortfolioItem>
+      ),
+    },
+    {
       id: ESCAPE_ROOM_TIMER.replace("/", ""),
       component: (
         <PortfolioItem
           image={EscapeRoomTimerGif}
           imageDescription="Aplicativo Escape Room Timer"
-          technologies={["Kotlin", "Jetpack Compose", "MVVM", "MediaPlayer Api", "Coroutines"]}
+          technologies={[
+            "Kotlin",
+            "Jetpack Compose",
+            "MVVM",
+            "MediaPlayer Api",
+            "Coroutines",
+          ]}
           link={ESCAPE_ROOM_TIMER}
-          backgroundColor={itemBackGroundColor}>
-          Escape Room Timer é um app que simula uma bomba relógio, tente desarmá-la
-          antes que exploda, erre o código e o tempo encurtará e tudo irá pelos
-          ares. Pode ser usado em partidas de Airsoft, Paintball ou em
+          backgroundColor={itemBackGroundColor}
+        >
+          Escape Room Timer é um app que simula uma bomba relógio, tente
+          desarmá-la antes que exploda, erre o código e o tempo encurtará e tudo
+          irá pelos ares. Pode ser usado em partidas de Airsoft, Paintball ou em
           casa. Feito para divertir com os amigos.
         </PortfolioItem>
       ),
@@ -54,7 +90,8 @@ const Portfolio = ({ title, itemBackGroundColor }) => {
             "Datastore",
           ]}
           link={BUSSOLA_AGIL}
-          backgroundColor={itemBackGroundColor}>
+          backgroundColor={itemBackGroundColor}
+        >
           Bússola Ágil é um app de bússola simples e preciso com um design
           bonito e moderno com diferentes estilos de bússola. Desenvolvido em
           Kotlin, utilizando o UI kit Jetpack Compose.
@@ -77,7 +114,8 @@ const Portfolio = ({ title, itemBackGroundColor }) => {
             "MVVM",
           ]}
           link={COMICS_INFO}
-          backgroundColor={itemBackGroundColor}>
+          backgroundColor={itemBackGroundColor}
+        >
           Comics Info, é um cliente App para a Marvel API, que obtém informações
           sobre as HQ's Marvel. Desenvolvido em Kotlin, utilizando o UI kit
           Jetpack Compose.
@@ -99,7 +137,8 @@ const Portfolio = ({ title, itemBackGroundColor }) => {
             "Analytics",
           ]}
           link={SETIME}
-          backgroundColor={itemBackGroundColor}>
+          backgroundColor={itemBackGroundColor}
+        >
           Setime é um aplicativo de agendamento com armazenamento de dados em
           nuvem desenvolvido para um salão de beleza, para que os esteticistas
           pudessem organizar seus horários de atendim...
@@ -120,7 +159,8 @@ const Portfolio = ({ title, itemBackGroundColor }) => {
             "Swipe To Delete",
           ]}
           link={ANIME_VIEW}
-          backgroundColor={itemBackGroundColor}>
+          backgroundColor={itemBackGroundColor}
+        >
           Anime View é um criador de lembretes dos últimos episódios de séries
           de animes assistidos, chegou a +400 downloads no Google Play,
           suportando 177 países em 4 idiomas.
@@ -141,7 +181,8 @@ const Portfolio = ({ title, itemBackGroundColor }) => {
             "Authentication",
           ]}
           link={AGENDAMENTO_WEB}
-          backgroundColor={itemBackGroundColor}>
+          backgroundColor={itemBackGroundColor}
+        >
           Agendamento Web é um sistema web de auto-agendamento para serviços de
           estética. Permite que o cliente escolha a procedimento, profissional,
           data e método de pagamento do aten...
@@ -164,7 +205,8 @@ const Portfolio = ({ title, itemBackGroundColor }) => {
             "REST",
           ]}
           link={PROJETO_VAMOS}
-          backgroundColor={itemBackGroundColor}>
+          backgroundColor={itemBackGroundColor}
+        >
           Projeto Vamos. Desenvolvido para automacão dos processos e
           gerenciamento dados da ONG para permitir uma maior praticidade na
           gestão da informação e controle de...
