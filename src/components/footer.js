@@ -14,15 +14,6 @@ const Footer = ({id}) => (
         <li>
           <a href="mailto:joaoplay16@gmail.com">joaoplay16@gmail.com</a>
         </li>
-        <li>
-          <a
-            className="phone"
-            href="https://api.whatsapp.com/send?phone=5599991296323"
-            target="_blank">
-            <img src={WhatsappIcon} alt="Ícone Whatsapp" />
-            +55 99 99129-6323
-          </a>
-        </li>
         <ul className="icons-container">
           <li>
             <a
