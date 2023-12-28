@@ -124,7 +124,7 @@ const AgendamentoWeb = () => {
               <img src={LinkIcon} alt="Ícone de corrente" />
               <LinkButton
                 className="font-2-xs cor-0 googleplay"
-                href="http://ec2-15-228-45-130.sa-east-1.compute.amazonaws.com/"
+                href="https://agendamento-web-mu.vercel.app/"
                 target="_blank">
                 demonstração
               </LinkButton>
