@@ -123,15 +123,15 @@ const AgendamentoWeb = () => {
                 repositório do projeto
               </LinkButton>
             </LinkButtonWithIcon>
-            {/* <LinkButtonWithIcon className="link-button demo-link">
+            <LinkButtonWithIcon className="link-button demo-link">
               <img src={LinkIcon} alt="Ícone de corrente" />
               <LinkButton
                 className="font-2-xs cor-0 googleplay"
-                href=""
+                href="https://projetovamos.netlify.app/"
                 target="_blank">
                 demonstração
               </LinkButton>
-            </LinkButtonWithIcon> */}
+            </LinkButtonWithIcon>
           </LinksContainer>
         </InfoContainer>
       </ProjectContainer>
